@@ -47,4 +47,4 @@ This application is developed for educational and demonstration purposes only an
 ## 👨‍💻 Author
 **Veeresh Kumar C**
 - GitHub: https://github.com/Veera9966148
-- LinkedIn: *(Add your LinkedIn profile URL here)*
+- LinkedIn: *(https://www.linkedin.com/in/veeresh-kumar90524)*
