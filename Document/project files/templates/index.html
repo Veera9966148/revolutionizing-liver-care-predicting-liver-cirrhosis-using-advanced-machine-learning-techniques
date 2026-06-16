@@ -177,6 +177,14 @@ button:hover{
     font-weight:600;
 }
 
+    .loading{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+    color:#2563eb;
+    font-size:18px;
+    font-weight:600;
+    }
 .success{
     background:#dcfce7;
     color:#166534;
@@ -407,6 +415,11 @@ required>
 Predict Liver Risk
 </button>
 
+<div id="loading" class="loading">
+    <i class="fa-solid fa-spinner fa-spin"></i>
+    Analyzing Liver Health...
+</div>
+
 </form>
 
 {% if prediction %}
@@ -495,23 +508,23 @@ Not a Medical Diagnosis.
 
 function validateForm(){
 
-let age =
-document.getElementById("Age").value;
+    let age = document.getElementById("Age").value;
 
-if(age <= 0){
-alert(
-"Age must be greater than zero."
-);
-return false;
+    if(age <= 0){
+        alert("Age must be greater than zero.");
+        return false;
+    }
+
+    document.getElementById("btn").innerHTML =
+        "⏳ Predicting...";
+
+    document.getElementById("loading").style.display =
+        "block";
+
+    return true;
 }
 
-document.getElementById("btn")
-.innerHTML =
-"⏳ Predicting...";
 
-return true;
-
-}
 
 new Chart(
 document.getElementById("chart"),
